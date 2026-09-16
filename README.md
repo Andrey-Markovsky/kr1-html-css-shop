@@ -23,3 +23,6 @@
 
 ## Текущий статус
 Создана базовая структура проекта.
+
+## Ссылка на опубликованный проект
+GitHub Pages: https://Andrey-Markovsky.github.io/kr1-html-css-shop/
