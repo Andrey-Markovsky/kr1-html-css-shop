@@ -147,20 +147,48 @@ a:focus-visible {
 }
 
 /* Карточки товаров */
+
+/* GRID: Сетка для карточек */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* FLEXBOX: Сама карточка товара */
 .product-card {
-  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
+  height: 100%;
 }
 
 .product-card:hover {
   border-color: var(--color-primary);
 }
 
-.product-card h3 {
+/* БЭМ-классы внутри карточки */
+.product-card__title {
   margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.product-card__desc {
+  margin-bottom: var(--space-sm);
+  color: var(--color-muted);
+}
+
+.product-card__price {
+  font-weight: bold;
+  margin-bottom: var(--space-md);
+}
+
+/* Прижимаем кнопку к низу */
+.product-card__button {
+  margin-top: auto; 
 }
 
 .button {
