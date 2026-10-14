@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Подробная карточка товара и таблица характеристик учебного интернет-магазина.">
+  <title>Карточка товара — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="product.html">Товар</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Карточка товара</span>
+    </nav>
+
+    <section class="section">
+      <h1>Учебный комплект разработчика «Товар 1»</h1>
+      <article class="product-card product-card--featured">
+        <span class="product-card__badge">Хит продаж</span>
+        <img
+          class="product-card__image"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='260' viewBox='0 0 600 260'><rect width='600' height='260' rx='8' fill='%23eef5ff'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%230057b8' font-family='Arial, sans-serif' font-size='24' font-weight='bold'>ShopProject — Товар 1</text></svg>"
+          alt="Изображение учебного комплекта Товар 1"
+          width="600"
+          height="260"
+        >
+        <h2 class="product-card__title">Товар 1 — Базовый и Pro комплект</h2>
+        <p class="product-card__description">
+          Подробное описание учебного товара. Комплект предназначен для освоения современной вёрстки,
+          семантической структуры HTML, компонентного подхода по методологии БЭМ и построения сеток на Flexbox и CSS Grid.
+        </p>
+        <p class="product-card__price">Цена: от 1000 руб.</p>
+        <a class="button button--primary product-card__button" href="order.html">
+          Оформить заявку
+        </a>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Характеристики и сравнение комплектаций</h2>
+      <table class="product-table">
+        <caption>Расширенная таблица характеристик и сравнения тарифов товара</caption>
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Базовая версия</th>
+            <th>Расширенная версия (Pro)</th>
+            <th>Примечание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Категория</td>
+            <td>Учебный товар</td>
+            <td>Профессиональный комплект</td>
+            <td>Подходит для КР №1–5</td>
+          </tr>
+          <tr>
+            <td>Артикул</td>
+            <td>SP-2026-BASE</td>
+            <td>SP-2026-PRO</td>
+            <td>Внутренний код каталога</td>
+          </tr>
+          <tr>
+            <td>Количество модулей</td>
+            <td>5 базовых модулей</td>
+            <td>12 расширенных модулей</td>
+            <td>Включая практику по БЭМ и сеткам</td>
+          </tr>
+          <tr>
+            <td>Формат поставки</td>
+            <td>Цифровой доступ</td>
+            <td>Цифровой доступ + исходники</td>
+            <td>Мгновенное получение после заявки</td>
+          </tr>
+          <tr>
+            <td>Техническая поддержка</td>
+            <td>По электронной почте</td>
+            <td>Приоритетная 24/7 + консультации</td>
+            <td>Ответ в течение 15 минут</td>
+          </tr>
+          <tr>
+            <td>Гарантия и обновления</td>
+            <td>6 месяцев</td>
+            <td>12 месяцев (бесплатные обновления)</td>
+            <td>Официальная гарантия проекта</td>
+          </tr>
+          <tr>
+            <td>Наличие на складе</td>
+            <td>В наличии</td>
+            <td>В наличии (по предзаказу)</td>
+            <td>Обновлено сегодня</td>
+          </tr>
+          <tr>
+            <td>Стоимость</td>
+            <td>1000 руб.</td>
+            <td>1800 руб.</td>
+            <td>Действует скидка для студентов</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+</body>
+</html>
