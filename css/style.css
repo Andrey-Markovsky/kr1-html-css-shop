@@ -91,19 +91,20 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* Оформляем шапку страницы */
+/* Оформляем шапку страницы и навигацию по БЭМ */
 .site-header {
-  max-width: 1100px;
+  background-color: var(--color-surface);
+}
+.site-header__inner {
+  max-width: var(--container-width);
   margin: 0 auto;
+  padding: var(--space-lg);
 }
-
-.site-logo {
-  font-weight: bold;
+.site-header__logo {
+  font-weight: 700;
+  color: var(--color-text);
   text-decoration: none;
-  color: #222222;
 }
-
-/* Навигация */
 .site-nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -114,20 +115,22 @@ a:focus-visible {
   margin: var(--space-md) 0 0;
   list-style: none;
 }
-
-.site-nav__list li {
-  margin-bottom: 8px;
-}
-
-.site-nav__list a {
+.site-nav__link {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
   color: var(--color-primary);
   text-decoration: none;
   border-radius: var(--radius-sm);
 }
-
-.site-nav__list a:hover {
+.site-nav__link:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+.site-nav__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.site-nav__link--active {
   color: var(--color-white);
   background-color: var(--color-primary);
 }
@@ -155,59 +158,69 @@ a:focus-visible {
   margin-top: 0;
 }
 
-/* Карточки товаров */
-
-/* GRID: Сетка для карточек */
+/* Карточки товаров и сетка по БЭМ (Этапы 6 и 7) */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
 }
 
-/* FLEXBOX: Сама карточка товара */
 .product-card {
   display: flex;
   flex-direction: column;
+  gap: var(--space-sm);
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
-  height: 100%;
 }
 
 .product-card:hover {
   border-color: var(--color-primary);
 }
 
-/* БЭМ-классы внутри карточки */
-.product-card__title {
-  margin-top: 0;
-  margin-bottom: var(--space-sm);
+.product-card--featured {
+  border-color: var(--color-primary);
 }
 
-.product-card__desc {
-  margin-bottom: var(--space-sm);
+.product-card--discount {
+  border-color: var(--color-danger);
+}
+
+.product-card__title {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.product-card__description {
+  margin: 0;
   color: var(--color-muted);
 }
 
 .product-card__price {
-  font-weight: bold;
-  margin-bottom: var(--space-md);
+  margin: 0;
+  font-weight: 700;
 }
 
-/* Прижимаем кнопку к низу */
+.product-card--discount .product-card__price {
+  color: var(--color-danger);
+}
+
 .product-card__button {
-  margin-top: auto; 
+  margin-top: auto;
+  align-self: flex-start;
 }
 
+/* Кнопки по БЭМ (Этап 12) */
 .button {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
   color: var(--color-white);
   background-color: var(--color-primary);
-  text-decoration: none;
   border: none;
   border-radius: var(--radius-sm);
+  font: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -215,12 +228,33 @@ a:focus-visible {
   background-color: var(--color-primary-dark);
 }
 
+.button--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.button--secondary {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+}
+
+.button--secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
 .button:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
 
-.button:disabled {
+.button:disabled,
+.button--disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
@@ -234,13 +268,8 @@ a:focus-visible {
   background-color: var(--color-surface);
 }
 
-/*
-  Модальное окно.
-  Элемент dialog сам умеет открываться поверх страницы.
-*/
-
 /* ===============================
-   5. Форма и модальное окно
+   5. Форма и модальное окно по БЭМ (Этапы 10 и 11)
    =============================== */
 
 .order-dialog {
@@ -254,18 +283,22 @@ a:focus-visible {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form-field {
+.order-dialog__title {
+  margin-top: 0;
+}
+
+.order-form__field {
   margin-bottom: var(--space-md);
 }
 
-.form-field label {
+.order-form__label {
   display: block;
   margin-bottom: var(--space-xs);
 }
 
-.form-field input,
-.form-field select,
-.form-field textarea {
+.order-form__input,
+.order-form__select,
+.order-form__textarea {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid var(--color-border);
@@ -273,26 +306,25 @@ a:focus-visible {
   font: inherit;
 }
 
-.form-field input[type="checkbox"] {
+.order-form__checkbox {
   width: auto;
 }
 
-.form-field small {
+.order-form__hint {
   display: block;
   margin-top: var(--space-xs);
   color: var(--color-muted);
 }
 
-.form-field input:hover,
-.form-field select:hover,
-.form-field textarea:hover {
+.order-form__input:hover,
+.order-form__select:hover,
+.order-form__textarea:hover {
   border-color: var(--color-primary);
 }
 
-.form-field input:focus-visible,
-.form-field select:focus-visible,
-.form-field textarea:focus-visible,
-.form-actions button:focus-visible {
+.order-form__input:focus-visible,
+.order-form__select:focus-visible,
+.order-form__textarea:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
@@ -300,30 +332,11 @@ a:focus-visible {
 [aria-invalid="true"] {
   border-color: var(--color-danger);
 }
-/*
-  Видимый фокус для клавиатурной навигации.
-*/
-.form-field input:focus-visible,
-.form-field select:focus-visible,
-.form-field textarea:focus-visible,
-.form-actions button:focus-visible {
-  outline: 2px solid #0057b8;
-  outline-offset: 2px;
-}
-/*
-  Подсветка ошибочных полей.
-  Атрибут aria-invalid будет добавляться через JavaScript.
-*/
-[aria-invalid="true"] {
-  border-color: #b00020;
-}
-/*
-  Кнопки формы.
-*/
-.form-actions {
+
+.order-form__actions {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
 }
 /*
   Сообщение об успешной отправке.
@@ -342,10 +355,10 @@ a:focus-visible {
   font-size: 14px;
   color: var(--color-muted);
 }
-.breadcrumbs a {
+.breadcrumbs__link {
   color: var(--color-primary);
 }
-.breadcrumbs span::before {
+.breadcrumbs__current::before {
   content: " / ";
   color: var(--color-muted);
 }
@@ -362,28 +375,6 @@ html {
   padding: var(--space-md);
   border-left: 4px solid var(--color-success);
   background-color: var(--color-success-bg);
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  margin-bottom: 0;
-  padding: var(--space-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background-color: var(--color-bg);
-}
-
-.product-card .button {
-  margin-top: auto;
-  align-self: flex-start;
 }
 
 .catalog-layout {
