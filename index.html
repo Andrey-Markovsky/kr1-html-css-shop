@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Главная страница учебного интернет-магазина: преимущества, популярные товары, частые вопросы и оформление заявки.">
   <title>Главная — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
@@ -20,6 +21,12 @@
             <a class="site-nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Товар</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заказ</a>
+          </li>
+          <li class="site-nav__item">
             <a class="site-nav__link" href="contacts.html">Контакты</a>
           </li>
           <li class="site-nav__item">
@@ -27,6 +34,9 @@
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#faq">Вопросы и ответы</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
@@ -43,7 +53,7 @@
         В дальнейшем на её основе будет разработан многостраничный сайт
         интернет-магазина или каталога услуг.
       </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
+      <a class="button button--primary" href="#popular">Перейти к товарам</a>
     </section>
     <section class="section" id="advantages">
       <h2>Преимущества проекта</h2>
@@ -58,6 +68,7 @@
       <h2>Популярные товары</h2>
       <div class="products-grid">
         <article class="product-card product-card--featured">
+          <span class="product-card__badge">Хит</span>
           <h3 class="product-card__title">Товар 1</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1000 руб.</p>
@@ -74,6 +85,7 @@
           </button>
         </article>
         <article class="product-card product-card--discount">
+          <span class="product-card__badge">Скидка</span>
           <h3 class="product-card__title">Товар 3</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 2000 руб.</p>
@@ -81,7 +93,30 @@
             Заказать
           </button>
         </article>
-      </div> 
+      </div>
+    </section>
+    <section class="section faq" id="faq">
+      <h2 class="faq__title">Часто задаваемые вопросы</h2>
+      <div class="faq__list">
+        <details class="faq__item" open>
+          <summary class="faq__question">Как оформить заказ в учебном интернет-магазине?</summary>
+          <p class="faq__answer">
+            Вы можете нажать кнопку «Заказать» в любой карточке товара, чтобы открыть быстрое модальное окно, либо перейти на отдельную страницу «Заказ» в верхнем меню навигации.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Где посмотреть подробные характеристики и сравнение комплектаций?</summary>
+          <p class="faq__answer">
+            Полная таблица характеристик и сравнение базовой и расширенной версий доступны на странице «Товар» (файл product.html).
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Какие технологии использованы при разработке этого сайта?</summary>
+          <p class="faq__answer">
+            Проект построен на семантическом HTML5, современной CSS-архитектуре с переменными в :root, раскладках Flexbox и CSS Grid, а также именовании классов по методологии БЭМ.
+          </p>
+        </details>
+      </div>
     </section>
     <aside class="aside-info">
       <h2>Информация для студентов</h2>
@@ -92,12 +127,17 @@
       </p>
     </aside>
   </main>
-  <footer id="contacts">
+  <footer class="site-footer" id="contacts">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <div class="order-dialog__header">
+      <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+      <p class="order-dialog__subtitle">
+        Заполните контактные данные — мы свяжемся с вами для подтверждения заказа.
+      </p>
+    </div>
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
       <input id="selected-product" name="selected-product" type="hidden">
       <div class="order-form__field">
@@ -189,8 +229,8 @@
       </div>
     </form>
   </dialog>
-<p class="success-message" id="success-message" hidden>
-  Форма успешно отправлена!
-</p>
+  <p class="success-message" id="success-message" hidden>
+    Форма успешно отправлена!
+  </p>
 </body>
 </html>
