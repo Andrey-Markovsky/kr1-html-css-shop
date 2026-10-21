@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Подробная карточка товара Стартовый шаблон ShopStarter UI и таблица сравнения комплектаций.">
-  <title>Стартовый шаблон «ShopStarter UI» — Учебный интернет-магазин</title>
+  <meta name="description" content="Подробная карточка товара и таблица сравнения комплектаций учебного интернет-магазина.">
+  <title>Карточка товара — Учебный интернет-магазин ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
@@ -20,7 +20,7 @@
             <a class="site-nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="product.html">Товар</a>
+            <a class="site-nav__link site-nav__link--active" href="product.html?id=1">Товар</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="order.html">Заказ</a>
@@ -46,51 +46,65 @@
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current">Стартовый шаблон «ShopStarter UI»</span>
+      <span class="breadcrumbs__current" id="prod-breadcrumb">Стартовый шаблон «ShopStarter UI»</span>
+    </nav>
+
+    <!-- Быстрый переключатель между всеми 6 товарами магазина -->
+    <nav class="product-switcher" aria-label="Выбор товара для просмотра">
+      <span class="product-switcher__label">Быстрый переход к товару:</span>
+      <div class="product-switcher__links">
+        <a class="product-switcher__link" data-id="1" href="product.html?id=1">1. ShopStarter UI</a>
+        <a class="product-switcher__link" data-id="2" href="product.html?id=2">2. RootTokens CSS</a>
+        <a class="product-switcher__link" data-id="3" href="product.html?id=3">3. SmartForms &amp; Dialog</a>
+        <a class="product-switcher__link" data-id="4" href="product.html?id=4">4. Практикум Grid &amp; Flex</a>
+        <a class="product-switcher__link" data-id="5" href="product.html?id=5">5. Руководство БЭМ</a>
+        <a class="product-switcher__link" data-id="6" href="product.html?id=6">6. Полный бандл</a>
+      </div>
     </nav>
 
     <section class="section">
-      <h1>Стартовый шаблон интернет-магазина «ShopStarter UI»</h1>
+      <h1 id="prod-h1">Стартовый шаблон интернет-магазина «ShopStarter UI»</h1>
 
-      <article class="product-card product-card--featured product-card--detailed">
-        <span class="product-card__badge">Хит продаж</span>
+      <article class="product-card product-card--featured product-card--detailed" id="prod-card">
+        <span class="product-card__badge" id="prod-badge">Хит продаж</span>
 
         <!-- Левая колонка: главное фото + миниатюры + теги -->
         <div class="product-card__gallery">
           <img
             class="product-card__image product-card__image--main"
+            id="prod-img"
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
             alt="Главный экран шаблона интернет-магазина ShopStarter UI на ноутбуке"
             width="600"
-            height="360"
+            height="320"
           >
-          <div class="product-card__thumbs" aria-label="Дополнительные скриншоты товара">
+          <div class="product-card__thumbs" aria-label="Дополнительные скриншоты товара (нажмите для увеличения)">
             <img
               class="product-card__thumb"
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300&q=80"
-              alt="Фрагмент HTML и CSS кода по методологии БЭМ"
+              id="prod-thumb-1"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+              alt="Превью 1 — Общий вид"
               width="180"
-              height="110"
+              height="90"
+            >
+            <img
+              class="product-card__thumb"
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+              alt="Превью 2 — Структура кода"
+              width="180"
+              height="90"
               loading="lazy"
             >
             <img
               class="product-card__thumb"
-              src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=300&q=80"
-              alt="Система CSS-переменных и палитра цветов"
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+              alt="Превью 3 — Адаптивная сетка"
               width="180"
-              height="110"
-              loading="lazy"
-            >
-            <img
-              class="product-card__thumb"
-              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=300&q=80"
-              alt="Адаптивная сетка каталога товаров на CSS Grid"
-              width="180"
-              height="110"
+              height="90"
               loading="lazy"
             >
           </div>
-          <div class="product-card__tags" aria-label="Технологии проекта">
+          <div class="product-card__tags" id="prod-tags" aria-label="Технологии проекта">
             <span class="product-card__tag">HTML5</span>
             <span class="product-card__tag">CSS3 Grid &amp; Flexbox</span>
             <span class="product-card__tag">Методология БЭМ</span>
@@ -101,38 +115,33 @@
 
         <!-- Правая колонка: детальное описание, характеристики и покупка -->
         <div class="product-card__content">
-          <h2 class="product-card__title">Комплект шаблонов «ShopStarter UI» (Base &amp; Pro)</h2>
+          <h2 class="product-card__title" id="prod-title">Комплект шаблонов «ShopStarter UI» (Base &amp; Pro)</h2>
           <p class="product-card__meta">
-            Артикул: <strong>SP-2026-PRO</strong> • Категория: <strong>Готовые шаблоны и UI-киты</strong> • Рейтинг: <strong>★ 4.9 (42 отзыва)</strong> • <span class="product-card__status">В наличии</span>
+            Артикул: <strong id="prod-sku">SP-01-PRO</strong> • Категория: <strong id="prod-cat">Готовые шаблоны и UI-киты</strong> • Рейтинг: <strong id="prod-rating">★ 4.9 (42 отзыва)</strong> • <span class="product-card__status">В наличии</span>
           </p>
 
-          <p class="product-card__description">
+          <p class="product-card__description" id="prod-desc">
             Профессиональный учебно-практический комплект для быстрой разработки интернет-магазина.
             Включает продуманную семантическую структуру HTML5, компонентную архитектуру по методологии БЭМ,
             адаптивные сетки на Flexbox и CSS Grid, а также настроенные состояния фокуса для клавиатурной навигации.
           </p>
 
           <h3 class="product-card__subtitle">Что входит в комплект поставки:</h3>
-          <ul class="product-card__features">
+          <ul class="product-card__features" id="prod-features">
             <li><strong>5 готовых HTML-страниц:</strong> Главная, Каталог с фильтрами, Карточка товара, Оформление заказа и Контакты;</li>
             <li><strong>Дизайн-система в :root:</strong> централизованное управление цветами, отступами и радиусами скругления;</li>
             <li><strong>Чистая БЭМ-архитектура:</strong> изолированные блоки и модификаторы без конфликтов специфичности;</li>
             <li><strong>Доступные веб-формы:</strong> клиентская валидация, поддержка <code>aria-invalid</code> и нативное окно <code>&lt;dialog&gt;</code>;</li>
-            <li><strong>Подробная документация:</strong> пошаговый гайд по кастомизации стилей и публикации на GitHub Pages.</li>
           </ul>
 
           <div class="product-card__specs-box">
             <div class="product-card__spec-item">
               <span class="product-card__spec-label">Версия релиза:</span>
-              <span class="product-card__spec-value">v2.4 (Октябрь 2026)</span>
+              <span class="product-card__spec-value" id="prod-version">v2.4 (Октябрь 2026)</span>
             </div>
             <div class="product-card__spec-item">
               <span class="product-card__spec-label">Формат файлов:</span>
-              <span class="product-card__spec-value">HTML5, CSS3, JS, SVG (ZIP-архив 14 МБ)</span>
-            </div>
-            <div class="product-card__spec-item">
-              <span class="product-card__spec-label">Совместимость:</span>
-              <span class="product-card__spec-value">Chrome, Firefox, Safari, Yandex, Edge</span>
+              <span class="product-card__spec-value" id="prod-format">HTML5, CSS3, JS, SVG (ZIP-архив 14 МБ)</span>
             </div>
             <div class="product-card__spec-item">
               <span class="product-card__spec-label">Доставка:</span>
@@ -144,18 +153,18 @@
             <legend class="product-card__options-title">Выберите редакцию комплекта:</legend>
             <label class="product-card__option">
               <input type="radio" name="edition" value="base" checked>
-              <span><strong>Базовая (Base)</strong> — 5 шаблонов + базовые стили (1000 руб.)</span>
+              <span id="prod-opt-base"><strong>Базовая (Base)</strong> — стандартный пакет (1000 руб.)</span>
             </label>
             <label class="product-card__option">
               <input type="radio" name="edition" value="pro">
-              <span><strong>Расширенная (Pro)</strong> — исходники + UI-кит + консультация (1800 руб.)</span>
+              <span id="prod-opt-pro"><strong>Расширенная (Pro)</strong> — исходники + консультация (1800 руб.)</span>
             </label>
           </fieldset>
 
           <div class="product-card__purchase">
             <p class="product-card__price">
-              <span class="product-card__old-price">1400 руб.</span>
-              Цена: от 1000 руб.
+              <span class="product-card__old-price" id="prod-old-price">1400 руб.</span>
+              <span id="prod-price">Цена: 1000 руб.</span>
             </p>
             <div class="product-card__actions">
               <a class="button button--primary product-card__button" href="order.html">
@@ -173,7 +182,7 @@
     <section class="section" id="comparison">
       <h2>Характеристики и сравнение комплектаций</h2>
       <table class="product-table">
-        <caption>Расширенная таблица характеристик и сравнения тарифов шаблона «ShopStarter UI»</caption>
+        <caption id="table-caption">Расширенная таблица характеристик и сравнения тарифов товара</caption>
         <thead>
           <tr>
             <th>Параметр</th>
@@ -184,52 +193,52 @@
         </thead>
         <tbody>
           <tr>
-            <td>Назначение</td>
-            <td>Учебный и стартовый проект</td>
-            <td>Профессиональный коммерческий комплект</td>
+            <td>Категория</td>
+            <td id="table-cat-base">Учебный комплект</td>
+            <td>Профессиональный коммерческий пакет</td>
             <td>Полностью подходит для КР №1–5</td>
           </tr>
           <tr>
-            <td>Артикул в каталоге</td>
-            <td>SP-2026-BASE</td>
-            <td>SP-2026-PRO</td>
-            <td>Уникальный код продукта</td>
+            <td>Артикул</td>
+            <td id="table-sku-base">SP-01-BASE</td>
+            <td id="table-sku-pro">SP-01-PRO</td>
+            <td>Уникальный код каталога</td>
           </tr>
           <tr>
-            <td>Количество компонентов</td>
-            <td>5 страниц + 8 базовых БЭМ-блоков</td>
-            <td>5 страниц + 24 расширенных БЭМ-блока</td>
-            <td>Включая галерею, табы и модальные окна</td>
+            <td>Состав пакета</td>
+            <td id="table-mod-base">5 базовых модулей</td>
+            <td id="table-mod-pro">12 расширенных модулей + исходники</td>
+            <td>Включая практику по БЭМ и сеткам</td>
           </tr>
           <tr>
             <td>Формат поставки</td>
-            <td>ZIP-архив с кодом HTML/CSS</td>
-            <td>ZIP-архив + закрытый Git-репозиторий + макет</td>
+            <td>Цифровой ZIP-архив</td>
+            <td>ZIP-архив + закрытый Git-репозиторий</td>
             <td>Мгновенное получение после заявки</td>
           </tr>
           <tr>
             <td>Техническая поддержка</td>
             <td>По электронной почте</td>
-            <td>Приоритетная 24/7 + код-ревью проекта</td>
+            <td>Приоритетная 24/7 + код-ревью</td>
             <td>Ответ специалиста в течение 15 минут</td>
           </tr>
           <tr>
             <td>Гарантия и обновления</td>
-            <td>6 месяцев обновлений</td>
-            <td>12 месяцев + бесплатные новые модули</td>
+            <td>6 месяцев</td>
+            <td>12 месяцев (бесплатные обновления)</td>
             <td>Официальная гарантия ShopProject</td>
           </tr>
           <tr>
-            <td>Статус доступности</td>
-            <td>В наличии (моментально)</td>
-            <td>В наличии (моментально)</td>
-            <td>Релиз обновлён сегодня</td>
+            <td>Наличие на складе</td>
+            <td>В наличии</td>
+            <td>В наличии</td>
+            <td>Обновлено сегодня</td>
           </tr>
           <tr>
-            <td>Стоимость лицензии</td>
-            <td>1000 руб.</td>
-            <td>1800 руб.</td>
-            <td>Действует скидка по студенческому</td>
+            <td>Стоимость</td>
+            <td id="table-price-base">1000 руб.</td>
+            <td id="table-price-pro">1800 руб.</td>
+            <td>Действует скидка для студентов</td>
           </tr>
         </tbody>
       </table>
@@ -241,5 +250,225 @@
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
   <a class="back-to-top" href="#top" aria-label="Вернуться в начало страницы">↑ Наверх</a>
+
+  <!-- Скрипт динамической подстановки выбранного товара по параметру ?id=1..6 -->
+  <script>
+    const PRODUCTS_DB = {
+      "1": {
+        name: "Стартовый шаблон «ShopStarter UI»",
+        h1: "Стартовый шаблон интернет-магазина «ShopStarter UI»",
+        title: "Комплект шаблонов «ShopStarter UI» (Base & Pro)",
+        badge: "Хит продаж",
+        skuBase: "SP-01-BASE",
+        skuPro: "SP-01-PRO",
+        category: "Готовые шаблоны и UI-киты",
+        rating: "★ 4.9 (42 отзыва)",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+        desc: "Готовый комплект из 5 адаптивных страниц интернет-магазина с чистой БЭМ-архитектурой, семантической разметкой HTML5 и настроенными сетками.",
+        features: [
+          "<strong>5 связанных HTML-страниц:</strong> Главная, Каталог, Товар, Заказ и Контакты;",
+          "<strong>Готовая система CSS-переменных:</strong> палитра цветов и отступов в блоке :root;",
+          "<strong>Чистая методология БЭМ:</strong> отсутствие конфликтов специфичности;",
+          "<strong>Адаптивность и доступность:</strong> поддержка клавиатуры и экранных дикторов."
+        ],
+        tags: ["HTML5", "CSS3 Grid & Flexbox", "Методология БЭМ", "GitHub Pages Ready"],
+        version: "v2.4 (Октябрь 2026)",
+        format: "HTML5, CSS3, JS (ZIP-архив 14 МБ)",
+        oldPrice: "1400 руб.",
+        priceBase: "1000 руб.",
+        pricePro: "1800 руб.",
+        modBase: "5 базовых HTML-шаблонов",
+        modPro: "5 шаблонов + UI-кит + закрытый репозиторий"
+      },
+      "2": {
+        name: "Дизайн-система «RootTokens CSS»",
+        h1: "Дизайн-система и набор токенов «RootTokens CSS»",
+        title: "Дизайн-система «RootTokens CSS» (Base & Pro)",
+        badge: "Стандарт",
+        skuBase: "SP-02-BASE",
+        skuPro: "SP-02-PRO",
+        category: "CSS-архитектура и стили",
+        rating: "★ 4.8 (31 отзыв)",
+        image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=900&q=80",
+        desc: "Профессиональный набор настраиваемых дизайн-токенов, цветовых схем, модульной типографики и интерактивных состояний для быстрой стилизации веб-проектов.",
+        features: [
+          "<strong>Более 60 CSS-переменных в :root:</strong> цвета, отступы, тени и скругления;",
+          "<strong>Интерактивные состояния:</strong> готовые стили для :hover, :active, :focus-visible;",
+          "<strong>Поддержка тем:</strong> светлая и контрастная акцентная палитра;",
+          "<strong>Единый код-стайл:</strong> лёгкая интеграция в любой учебный или рабочий проект."
+        ],
+        tags: ["CSS Variables :root", "Design Tokens", "UI States", "Typography"],
+        version: "v1.9 (Октябрь 2026)",
+        format: "CSS3, документация Markdown (ZIP 8 МБ)",
+        oldPrice: "",
+        priceBase: "1500 руб.",
+        pricePro: "2300 руб.",
+        modBase: "Базовый набор переменных :root",
+        modPro: "Полная палитра + тёмная тема + Figma-токены"
+      },
+      "3": {
+        name: "Пакет форм «SmartForms & Dialog»",
+        h1: "Пакет доступных веб-форм «SmartForms & Dialog»",
+        title: "Комплект форм и модальных окон «SmartForms & Dialog»",
+        badge: "Скидка -20%",
+        skuBase: "SP-03-BASE",
+        skuPro: "SP-03-PRO",
+        category: "Интерактивные компоненты",
+        rating: "★ 4.7 (28 отзывов)",
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80",
+        desc: "Коллекция доступных веб-форм оформления заказа, обратной связи и нативных модальных окон <dialog> с встроенной клиентской валидацией.",
+        features: [
+          "<strong>Нативный элемент &lt;dialog&gt;:</strong> плавное открытие, закрытие по Esc и клику на фон;",
+          "<strong>Клиентская HTML5-валидация:</strong> маски телефонов, проверка email и обязательных полей;",
+          "<strong>Доступность (Accessibility):</strong> связка через aria-describedby и подсветка aria-invalid;",
+          "<strong>Готовый JS-скрипт:</strong> обработка отправки формы без перезагрузки страницы."
+        ],
+        tags: ["HTML5 Forms", "Native <dialog>", "ARIA Accessibility", "Vanilla JS"],
+        version: "v3.1 (Октябрь 2026)",
+        format: "HTML5, CSS3, Vanilla JS (ZIP 11 МБ)",
+        oldPrice: "2500 руб.",
+        priceBase: "2000 руб.",
+        pricePro: "2900 руб.",
+        modBase: "3 формы + модальное окно <dialog>",
+        modPro: "8 форм + мультишаговый заказ + JS-валидатор"
+      },
+      "4": {
+        name: "Практикум «Мастер сеток: Grid & Flex»",
+        h1: "Интерактивный практикум «Мастер сеток: Grid & Flex»",
+        title: "Курс и сборник макетов «Мастер сеток: Grid & Flex»",
+        badge: "Новинка",
+        skuBase: "SP-04-BASE",
+        skuPro: "SP-04-PRO",
+        category: "Обучающие практикумы",
+        rating: "★ 5.0 (54 отзыва)",
+        image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=900&q=80",
+        desc: "Практическое руководство и набор из 20 реальных макетов по построению адаптивных навигационных панелей на Flexbox и сложных сеток каталогов на CSS Grid.",
+        features: [
+          "<strong>Flexbox-навигация:</strong> выравнивание шапки, меню, карточек и кнопок;",
+          "<strong>Двумерные сетки CSS Grid:</strong> построение каталогов с боковыми фильтрами (grid-template-areas);",
+          "<strong>Адаптивная вёрстка:</strong> резиновые колонки auto-fit / minmax и медиазапросы;",
+          "<strong>20 практических задач:</strong> пошаговые упражнения с эталонными решениями."
+        ],
+        tags: ["CSS Grid Layout", "Flexbox", "Responsive Design", "Практикум"],
+        version: "v2.0 (Октябрь 2026)",
+        format: "HTML/CSS макеты + PDF-гайд (ZIP 45 МБ)",
+        oldPrice: "",
+        priceBase: "2500 руб.",
+        pricePro: "3500 руб.",
+        modBase: "10 базовых макетов + теория",
+        modPro: "20 макетов + видеоразборы + проверка кода"
+      },
+      "5": {
+        name: "Руководство «БЭМ и доступность (a11y)»",
+        h1: "Практическое руководство «БЭМ и веб-доступность (a11y)»",
+        title: "Книга и чек-лист «БЭМ и доступность (a11y)»",
+        badge: "Рекомендуем",
+        skuBase: "SP-05-BASE",
+        skuPro: "SP-05-PRO",
+        category: "Методологии и стандарты",
+        rating: "★ 4.9 (19 отзывов)",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80",
+        desc: "Настольная электронная книга и проверочный чек-лист по грамотному именованию CSS-классов по методологии БЭМ и созданию доступных веб-интерфейсов.",
+        features: [
+          "<strong>Архитектура БЭМ:</strong> разбор Блоков, Элементов и Модификаторов на реальных примерах;",
+          "<strong>Клавиатурная навигация:</strong> настройка видимого фокуса :focus-visible и :focus-within;",
+          "<strong>Семантика и ARIA:</strong> правильное использование ролей, ориентиров и скрытых подписей;",
+          "<strong>Интерактивный чек-лист:</strong> 50 пунктов для самопроверки перед сдачей проекта."
+        ],
+        tags: ["БЭМ (BEM)", "Web Accessibility (a11y)", "WCAG 2.1", "Чек-лист"],
+        version: "v1.5 (Октябрь 2026)",
+        format: "PDF, EPUB + примеры кода (ZIP 18 МБ)",
+        oldPrice: "",
+        priceBase: "1200 руб.",
+        pricePro: "1900 руб.",
+        modBase: "Электронная книга + чек-лист (PDF)",
+        modPro: "Книга + примеры рефакторинга + аудит вашего сайта"
+      },
+      "6": {
+        name: "Полный бандл «Frontend-разработчик»",
+        h1: "Полный бандл «Frontend-разработчик 2026» (Все-в-одном)",
+        title: "Максимальный комплект «Frontend-разработчик» (All-in-One)",
+        badge: "Топ продаж",
+        skuBase: "SP-06-BASE",
+        skuPro: "SP-06-PRO",
+        category: "Полные комплекты (Bundles)",
+        rating: "★ 5.0 (67 отзывов)",
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80",
+        desc: "Максимальный набор: включает все 5 предыдущих комплектов, полные исходники многостраничного магазина, инструкцию по работе с Git и публикации на GitHub Pages.",
+        features: [
+          "<strong>Все 5 продуктов в одном пакете:</strong> экономия более 40% от стоимости по отдельности;",
+          "<strong>Полная готовность к сдаче:</strong> эталонная структура из 5 страниц с документацией README;",
+          "<strong>Шпаргалка по Git и GitHub Pages:</strong> быстрый деплой проекта из терминала VS Code;",
+          "<strong>Индивидуальная поддержка:</strong> ответы на вопросы и помощь с доработкой под требования."
+        ],
+        tags: ["All-in-One Bundle", "HTML5/CSS3/JS", "Git & GitHub Pages", "VIP Support"],
+        version: "v4.0 (Октябрь 2026)",
+        format: "Полный архив всех материалов (ZIP 95 МБ)",
+        oldPrice: "4200 руб.",
+        priceBase: "3000 руб.",
+        pricePro: "4500 руб.",
+        modBase: "Все 5 комплектов + гайд по GitHub Pages",
+        modPro: "Полный бандл + личная консультация и ревью"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const currentId = PRODUCTS_DB[params.get("id")] ? params.get("id") : "1";
+    const item = PRODUCTS_DB[currentId];
+
+    document.title = item.name + " — Учебный интернет-магазин ShopProject";
+    document.getElementById("prod-breadcrumb").textContent = item.name;
+    document.getElementById("prod-h1").textContent = item.h1;
+    document.getElementById("prod-title").textContent = item.title;
+    document.getElementById("prod-badge").textContent = item.badge;
+    document.getElementById("prod-sku").textContent = item.skuPro;
+    document.getElementById("prod-cat").textContent = item.category;
+    document.getElementById("prod-rating").textContent = item.rating;
+
+    const mainImg = document.getElementById("prod-img");
+    const firstThumb = document.getElementById("prod-thumb-1");
+    mainImg.src = item.image;
+    mainImg.alt = item.h1;
+    firstThumb.src = item.image;
+
+    document.getElementById("prod-desc").textContent = item.desc;
+    document.getElementById("prod-features").innerHTML = item.features.map(f => `<li>${f}</li>`).join("");
+    document.getElementById("prod-tags").innerHTML = item.tags.map(t => `<span class="product-card__tag">${t}</span>`).join("");
+    document.getElementById("prod-version").textContent = item.version;
+    document.getElementById("prod-format").textContent = item.format;
+
+    document.getElementById("prod-opt-base").innerHTML = `<strong>Базовая (Base)</strong> — ${item.modBase} (${item.priceBase})`;
+    document.getElementById("prod-opt-pro").innerHTML = `<strong>Расширенная (Pro)</strong> — ${item.modPro} (${item.pricePro})`;
+
+    const oldPriceEl = document.getElementById("prod-old-price");
+    if (item.oldPrice) {
+      oldPriceEl.textContent = item.oldPrice;
+      oldPriceEl.hidden = false;
+    } else {
+      oldPriceEl.hidden = true;
+    }
+    document.getElementById("prod-price").textContent = "Цена: от " + item.priceBase;
+
+    document.getElementById("table-caption").textContent = "Расширенная таблица характеристик и сравнения тарифов: " + item.name;
+    document.getElementById("table-cat-base").textContent = item.category;
+    document.getElementById("table-sku-base").textContent = item.skuBase;
+    document.getElementById("table-sku-pro").textContent = item.skuPro;
+    document.getElementById("table-mod-base").textContent = item.modBase;
+    document.getElementById("table-mod-pro").textContent = item.modPro;
+    document.getElementById("table-price-base").textContent = item.priceBase;
+    document.getElementById("table-price-pro").textContent = item.pricePro;
+
+    document.querySelectorAll(".product-switcher__link").forEach(link => {
+      if (link.dataset.id === currentId) {
+        link.classList.add("product-switcher__link--active");
+      }
+    });
+
+    document.querySelectorAll(".product-card__thumb").forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        mainImg.src = thumb.src;
+      });
+    });
+  </script>
 </body>
 </html>

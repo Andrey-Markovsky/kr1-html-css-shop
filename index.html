@@ -21,7 +21,7 @@
             <a class="site-nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="product.html">Товар</a>
+            <a class="site-nav__link" href="product.html?id=1">Товар</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="order.html">Заказ</a>
@@ -87,9 +87,12 @@
             <li>Готовые шаблоны семантики и БЭМ</li>
           </ul>
           <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Стартовый шаблон «ShopStarter UI»">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--primary" href="product.html?id=1">Подробнее</a>
+            <button class="button button--secondary" type="button" data-product="Стартовый шаблон «ShopStarter UI»">
+              Заказать
+            </button>
+          </div>
         </article>
 
         <!-- Популярный товар 2 -->
@@ -112,9 +115,12 @@
             <li>Состояния интерфейса (:hover, :focus)</li>
           </ul>
           <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Дизайн-система «RootTokens CSS»">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--primary" href="product.html?id=2">Подробнее</a>
+            <button class="button button--secondary" type="button" data-product="Дизайн-система «RootTokens CSS»">
+              Заказать
+            </button>
+          </div>
         </article>
 
         <!-- Популярный товар 3 -->
@@ -141,9 +147,12 @@
             <span class="product-card__old-price">2500 руб.</span>
             Цена: 2000 руб.
           </p>
-          <button class="button button--primary product-card__button" type="button" data-product="Пакет форм «SmartForms & Dialog»">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--primary" href="product.html?id=3">Подробнее</a>
+            <button class="button button--secondary" type="button" data-product="Пакет форм «SmartForms & Dialog»">
+              Заказать
+            </button>
+          </div>
         </article>
       </div>
     </section>
@@ -151,21 +160,21 @@
       <h2 class="faq__title">Часто задаваемые вопросы</h2>
       <div class="faq__list">
         <details class="faq__item" open>
-          <summary class="faq__question">Как оформить заказ в учебном интернет-магазине?</summary>
+          <summary class="faq__question">Как посмотреть описание конкретного товара или оформить заказ?</summary>
           <p class="faq__answer">
-            Вы можете нажать кнопку «Заказать» в любой карточке товара, чтобы открыть быстрое модальное окно, либо перейти на отдельную страницу «Заказ» в верхнем меню навигации.
+            Нажмите кнопку «Подробнее» в любой карточке на главной странице или в каталоге — откроется персональная страница выбранного товара с его описанием и характеристиками. Для быстрого заказа нажмите «Заказать».
           </p>
         </details>
         <details class="faq__item">
           <summary class="faq__question">Где посмотреть подробные характеристики и сравнение комплектаций?</summary>
           <p class="faq__answer">
-            Полная таблица характеристик и сравнение базовой и расширенной версий доступны на странице «Товар» (файл product.html).
+            Полная таблица характеристик и сравнение базовой и расширенной версий доступны на странице каждого товара (`product.html`).
           </p>
         </details>
         <details class="faq__item">
           <summary class="faq__question">Какие технологии использованы при разработке этого сайта?</summary>
           <p class="faq__answer">
-            Проект построен на семантическом HTML5, современной CSS-архитектуре с переменными в :root, раскладках Flexbox и CSS Grid, а также именовании классов по методологии БЭМ.
+            Проект построен на семантическом HTML5, современной CSS-архитектуре с переменными в :root, раскладках Flexbox и CSS Grid, методологии БЭМ и динамической подгрузке данных товара на JavaScript.
           </p>
         </details>
       </div>
@@ -174,8 +183,7 @@
       <h2>Информация для студентов</h2>
       <p>
         В проекте реализованы все ключевые требования: интерактивные формы с валидацией,
-        модальное окно &lt;dialog&gt;, каталог на CSS Grid, подробная карточка товара с галереей
-        и таблицей сравнения комплектаций.
+        модальное окно &lt;dialog&gt;, каталог на CSS Grid и динамическая карточка для каждого из 6 товаров каталога.
       </p>
     </aside>
   </main>
