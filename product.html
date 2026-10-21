@@ -7,7 +7,7 @@
   <title>Карточка товара — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -35,7 +35,7 @@
             <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            <a class="site-nav__link" href="index.html#faq">Вопросы и ответы</a>
           </li>
         </ul>
       </nav>
@@ -61,11 +61,23 @@
           height="260"
         >
         <h2 class="product-card__title">Товар 1 — Базовый и Pro комплект</h2>
+        <p class="product-card__meta">
+          Артикул: SP-2026-PRO • Категория: Учебные комплекты • <span class="product-card__status">В наличии</span>
+        </p>
         <p class="product-card__description">
           Подробное описание учебного товара. Комплект предназначен для освоения современной вёрстки,
           семантической структуры HTML, компонентного подхода по методологии БЭМ и построения сеток на Flexbox и CSS Grid.
         </p>
-        <p class="product-card__price">Цена: от 1000 руб.</p>
+        <ul class="product-card__features">
+          <li>Полный набор шаблонов из 5 связанных HTML-страниц;</li>
+          <li>Готовая система дизайн-токенов (CSS-переменных) в блоке :root;</li>
+          <li>Модульная БЭМ-архитектура без конфликтов специфичности;</li>
+          <li>Доступные формы с клиентской валидацией и поддержкой клавиатуры.</li>
+        </ul>
+        <p class="product-card__price">
+          <span class="product-card__old-price">1400 руб.</span>
+          Цена: от 1000 руб.
+        </p>
         <a class="button button--primary product-card__button" href="order.html">
           Оформить заявку
         </a>
@@ -142,5 +154,6 @@
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+  <a class="back-to-top" href="#top" aria-label="Вернуться в начало страницы">↑ Наверх</a>
 </body>
 </html>

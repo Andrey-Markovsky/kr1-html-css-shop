@@ -7,7 +7,7 @@
   <title>Каталог товаров — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -49,7 +49,7 @@
     <section class="section">
       <h1>Каталог товаров</h1>
       <p>
-        На этой странице представлен расширенный учебный каталог товаров с категориями, фильтрами и интерактивными карточками.
+        На этой странице представлен расширенный учебный каталог товаров с категориями, фильтрами и подробными интерактивными карточками.
       </p>
     </section>
     <section class="catalog-layout">
@@ -87,40 +87,85 @@
           <article class="product-card product-card--featured">
             <span class="product-card__badge">Хит</span>
             <h3 class="product-card__title">Товар 1</h3>
+            <p class="product-card__meta">
+              Арт. SP-01 • <span class="product-card__status">В наличии</span>
+            </p>
             <p class="product-card__description">Базовый учебный комплект для освоения веб-разработки.</p>
+            <ul class="product-card__features">
+              <li>Семантический HTML5</li>
+              <li>Базовые правила CSS</li>
+            </ul>
             <p class="product-card__price">Цена: 1000 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
           <article class="product-card">
             <h3 class="product-card__title">Товар 2</h3>
+            <p class="product-card__meta">
+              Арт. SP-02 • <span class="product-card__status">В наличии</span>
+            </p>
             <p class="product-card__description">Стандартный пакет услуг и сопутствующих компонентов.</p>
+            <ul class="product-card__features">
+              <li>CSS-переменные :root</li>
+              <li>Интерактивные состояния</li>
+            </ul>
             <p class="product-card__price">Цена: 1500 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
           <article class="product-card product-card--discount">
             <span class="product-card__badge">Скидка</span>
             <h3 class="product-card__title">Товар 3</h3>
+            <p class="product-card__meta">
+              Арт. SP-03 • <span class="product-card__status">В наличии</span>
+            </p>
             <p class="product-card__description">Акционный набор со специальной ценой для студентов.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
+            <ul class="product-card__features">
+              <li>Модальное окно dialog</li>
+              <li>Клиентская валидация форм</li>
+            </ul>
+            <p class="product-card__price">
+              <span class="product-card__old-price">2500 руб.</span>
+              Цена: 2000 руб.
+            </p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
           <article class="product-card">
             <span class="product-card__badge product-card__badge--new">Новинка</span>
             <h3 class="product-card__title">Товар 4</h3>
+            <p class="product-card__meta">
+              Арт. SP-04 • <span class="product-card__status">В наличии</span>
+            </p>
             <p class="product-card__description">Расширенный учебный курс по современным сеткам.</p>
+            <ul class="product-card__features">
+              <li>Flexbox-навигация</li>
+              <li>Сетка каталога на CSS Grid</li>
+            </ul>
             <p class="product-card__price">Цена: 2500 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
           <article class="product-card">
             <h3 class="product-card__title">Товар 5</h3>
-            <p class="product-card__description">Практикум по адаптивной вёрстке и доступности.</p>
+            <p class="product-card__meta">
+              Арт. SP-05 • <span class="product-card__status">В наличии</span>
+            </p>
+            <p class="product-card__description">Практикум по именованию классов и доступности интерфейса.</p>
+            <ul class="product-card__features">
+              <li>Методология БЭМ</li>
+              <li>Клавиатурная навигация</li>
+            </ul>
             <p class="product-card__price">Цена: 1200 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
           <article class="product-card product-card--featured">
             <span class="product-card__badge">Топ</span>
             <h3 class="product-card__title">Товар 6</h3>
+            <p class="product-card__meta">
+              Арт. SP-06 • <span class="product-card__status">В наличии</span>
+            </p>
             <p class="product-card__description">Полный комплект материалов для подготовки к контрольной.</p>
+            <ul class="product-card__features">
+              <li>Все 5 страниц проекта</li>
+              <li>Готовность к GitHub Pages</li>
+            </ul>
             <p class="product-card__price">Цена: 3000 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
@@ -132,5 +177,6 @@
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+  <a class="back-to-top" href="#top" aria-label="Вернуться в начало страницы">↑ Наверх</a>
 </body>
 </html>

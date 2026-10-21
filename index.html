@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -70,26 +70,50 @@
         <article class="product-card product-card--featured">
           <span class="product-card__badge">Хит</span>
           <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
+          <p class="product-card__meta">
+            Категория: Базовый комплект • <span class="product-card__status">В наличии</span>
+          </p>
+          <p class="product-card__description">Краткое описание учебного товара для старта в веб-разработке.</p>
+          <ul class="product-card__features">
+            <li>5 практических модулей HTML/CSS</li>
+            <li>Готовые шаблоны семантики</li>
+          </ul>
           <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
+          <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
             Заказать
           </button>
         </article>
         <article class="product-card">
           <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
+          <p class="product-card__meta">
+            Категория: Стандарт • <span class="product-card__status">В наличии</span>
+          </p>
+          <p class="product-card__description">Комплект компонентов с настроенной CSS-архитектурой.</p>
+          <ul class="product-card__features">
+            <li>Система переменных в :root</li>
+            <li>Состояния интерфейса и форм</li>
+          </ul>
           <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 2">
+          <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
             Заказать
           </button>
         </article>
         <article class="product-card product-card--discount">
           <span class="product-card__badge">Скидка</span>
           <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 3">
+          <p class="product-card__meta">
+            Категория: Акционный набор • <span class="product-card__status">В наличии</span>
+          </p>
+          <p class="product-card__description">Расширенный курс по построению сеток и методологии БЭМ.</p>
+          <ul class="product-card__features">
+            <li>Раскладка на Flexbox и Grid</li>
+            <li>Полный БЭМ-рефакторинг</li>
+          </ul>
+          <p class="product-card__price">
+            <span class="product-card__old-price">2500 руб.</span>
+            Цена: 2000 руб.
+          </p>
+          <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
             Заказать
           </button>
         </article>
@@ -131,17 +155,22 @@
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
-  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title" aria-describedby="order-dialog-desc">
     <div class="order-dialog__header">
       <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
-      <p class="order-dialog__subtitle">
+      <p class="order-dialog__subtitle" id="order-dialog-desc">
         Заполните контактные данные — мы свяжемся с вами для подтверждения заказа.
       </p>
     </div>
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <p class="order-form__required-note">
+        Поля, отмеченные символом <span class="order-form__required" aria-hidden="true">*</span>, обязательны для заполнения.
+      </p>
       <input id="selected-product" name="selected-product" type="hidden">
       <div class="order-form__field">
-        <label class="order-form__label" for="order-name">Имя</label>
+        <label class="order-form__label" for="order-name">
+          Имя <span class="order-form__required" aria-hidden="true">*</span>
+        </label>
         <input
           class="order-form__input"
           id="order-name"
@@ -150,11 +179,16 @@
           placeholder="Введите ваше имя"
           minlength="2"
           autocomplete="given-name"
+          aria-required="true"
+          aria-describedby="order-name-hint"
           required
         >
+        <small class="order-form__hint" id="order-name-hint">Минимум 2 символа</small>
       </div>
       <div class="order-form__field">
-        <label class="order-form__label" for="order-email">E-mail</label>
+        <label class="order-form__label" for="order-email">
+          E-mail <span class="order-form__required" aria-hidden="true">*</span>
+        </label>
         <input
           class="order-form__input"
           id="order-email"
@@ -162,11 +196,14 @@
           type="email"
           placeholder="example@mail.ru"
           autocomplete="email"
+          aria-required="true"
           required
         >
       </div>
       <div class="order-form__field">
-        <label class="order-form__label" for="order-phone">Телефон</label>
+        <label class="order-form__label" for="order-phone">
+          Телефон <span class="order-form__required" aria-hidden="true">*</span>
+        </label>
         <input
           class="order-form__input"
           id="order-phone"
@@ -175,9 +212,11 @@
           inputmode="tel"
           placeholder="+7 (900) 000-00-00"
           pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+          aria-required="true"
+          aria-describedby="order-phone-hint"
           required
         >
-        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+        <small class="order-form__hint" id="order-phone-hint">Формат: +7 (900) 000-00-00</small>
       </div>
       <div class="order-form__field">
         <label class="order-form__label" for="order-date">Дата связи</label>
@@ -189,8 +228,10 @@
         >
       </div>
       <div class="order-form__field">
-        <label class="order-form__label" for="order-topic">Тема заявки</label>
-        <select class="order-form__select" id="order-topic" name="topic" required>
+        <label class="order-form__label" for="order-topic">
+          Тема заявки <span class="order-form__required" aria-hidden="true">*</span>
+        </label>
+        <select class="order-form__select" id="order-topic" name="topic" aria-required="true" required>
           <option value="">Выберите тему</option>
           <option value="product">Заказ товара</option>
           <option value="consultation">Консультация</option>
@@ -214,9 +255,10 @@
             id="order-agreement"
             name="agreement"
             type="checkbox"
+            aria-required="true"
             required
           >
-          Я согласен на обработку данных
+          Я согласен на обработку данных <span class="order-form__required" aria-hidden="true">*</span>
         </label>
       </div>
       <div class="order-form__actions">
@@ -229,8 +271,9 @@
       </div>
     </form>
   </dialog>
-  <p class="success-message" id="success-message" hidden>
+  <p class="success-message" id="success-message" role="status" aria-live="polite" hidden>
     Форма успешно отправлена!
   </p>
+  <a class="back-to-top" href="#top" aria-label="Вернуться в начало страницы">↑ Наверх</a>
 </body>
 </html>
