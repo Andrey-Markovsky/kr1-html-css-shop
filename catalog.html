@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Расширенный каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta name="description" content="Расширенный каталог цифровых товаров, UI-китов и учебных курсов для веб-разработчиков.">
+  <title>Каталог товаров — Учебный интернет-магазин ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
@@ -47,9 +47,9 @@
       <span class="breadcrumbs__current">Каталог</span>
     </nav>
     <section class="section">
-      <h1>Каталог товаров</h1>
+      <h1>Каталог цифровых товаров и курсов</h1>
       <p>
-        На этой странице представлен расширенный учебный каталог товаров с категориями, фильтрами и подробными интерактивными карточками.
+        Готовые шаблоны вёрстки, компонентные UI-киты и практические руководства по современной фронтенд-разработке.
       </p>
     </section>
     <section class="catalog-layout">
@@ -64,7 +64,7 @@
             </label>
             <label>
               <input type="checkbox" name="category" value="popular">
-              Популярные
+              Популярные (Хиты)
             </label>
             <label>
               <input type="checkbox" name="category" value="new">
@@ -84,43 +84,75 @@
       <section class="catalog-products">
         <h2>Список товаров</h2>
         <div class="products-grid">
+          <!-- Карточка 1 -->
           <article class="product-card product-card--featured">
             <span class="product-card__badge">Хит</span>
-            <h3 class="product-card__title">Товар 1</h3>
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+              alt="Ноутбук с открытым редактором кода HTML и CSS"
+              width="340"
+              height="200"
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Стартовый шаблон «ShopStarter UI»</h3>
             <p class="product-card__meta">
-              Арт. SP-01 • <span class="product-card__status">В наличии</span>
+              Арт. SP-01 • ★ 4.9 • <span class="product-card__status">В наличии</span>
             </p>
-            <p class="product-card__description">Базовый учебный комплект для освоения веб-разработки.</p>
+            <p class="product-card__description">Готовый комплект из 5 адаптивных страниц интернет-магазина с чистой архитектурой.</p>
             <ul class="product-card__features">
-              <li>Семантический HTML5</li>
-              <li>Базовые правила CSS</li>
+              <li>Семантический стандарт HTML5</li>
+              <li>Модульная сетка и БЭМ-классы</li>
+              <li>Готовая система CSS-переменных</li>
             </ul>
             <p class="product-card__price">Цена: 1000 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
+
+          <!-- Карточка 2 -->
           <article class="product-card">
-            <h3 class="product-card__title">Товар 2</h3>
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=600&q=80"
+              alt="Каскадные таблицы стилей CSS на экране монитора"
+              width="340"
+              height="200"
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Дизайн-система «RootTokens CSS»</h3>
             <p class="product-card__meta">
-              Арт. SP-02 • <span class="product-card__status">В наличии</span>
+              Арт. SP-02 • ★ 4.8 • <span class="product-card__status">В наличии</span>
             </p>
-            <p class="product-card__description">Стандартный пакет услуг и сопутствующих компонентов.</p>
+            <p class="product-card__description">Набор настраиваемых дизайн-токенов, цветовых палитр и типографики для быстрой вёрстки.</p>
             <ul class="product-card__features">
-              <li>CSS-переменные :root</li>
-              <li>Интерактивные состояния</li>
+              <li>CSS-переменные в блоке :root</li>
+              <li>Плавные состояния :hover и :focus</li>
+              <li>Поддержка светлой и акцентной тем</li>
             </ul>
             <p class="product-card__price">Цена: 1500 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
+
+          <!-- Карточка 3 -->
           <article class="product-card product-card--discount">
-            <span class="product-card__badge">Скидка</span>
-            <h3 class="product-card__title">Товар 3</h3>
+            <span class="product-card__badge">Скидка -20%</span>
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+              alt="Исходный код веб-форм и валидации на экране"
+              width="340"
+              height="200"
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Пакет форм «SmartForms & Dialog»</h3>
             <p class="product-card__meta">
-              Арт. SP-03 • <span class="product-card__status">В наличии</span>
+              Арт. SP-03 • ★ 4.7 • <span class="product-card__status">В наличии</span>
             </p>
-            <p class="product-card__description">Акционный набор со специальной ценой для студентов.</p>
+            <p class="product-card__description">Коллекция доступных веб-форм заказа, обратной связи и нативных модальных окон.</p>
             <ul class="product-card__features">
-              <li>Модальное окно dialog</li>
-              <li>Клиентская валидация форм</li>
+              <li>Нативное модальное окно &lt;dialog&gt;</li>
+              <li>Клиентская HTML5-валидация полей</li>
+              <li>Индикация ошибок через aria-invalid</li>
             </ul>
             <p class="product-card__price">
               <span class="product-card__old-price">2500 руб.</span>
@@ -128,43 +160,76 @@
             </p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
+
+          <!-- Карточка 4 -->
           <article class="product-card">
             <span class="product-card__badge product-card__badge--new">Новинка</span>
-            <h3 class="product-card__title">Товар 4</h3>
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80"
+              alt="Проектирование сетки макета сайта на бумаге и планшете"
+              width="340"
+              height="200"
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Практикум «Мастер сеток: Grid & Flex»</h3>
             <p class="product-card__meta">
-              Арт. SP-04 • <span class="product-card__status">В наличии</span>
+              Арт. SP-04 • ★ 5.0 • <span class="product-card__status">В наличии</span>
             </p>
-            <p class="product-card__description">Расширенный учебный курс по современным сеткам.</p>
+            <p class="product-card__description">Интерактивный видеокурс и сборник макетов по построению сложных адаптивных сеток.</p>
             <ul class="product-card__features">
-              <li>Flexbox-навигация</li>
-              <li>Сетка каталога на CSS Grid</li>
+              <li>Адаптивная Flexbox-навигация</li>
+              <li>Каталог товаров на CSS Grid</li>
+              <li>20 практических заданий с проверкой</li>
             </ul>
             <p class="product-card__price">Цена: 2500 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
+
+          <!-- Карточка 5 -->
           <article class="product-card">
-            <h3 class="product-card__title">Товар 5</h3>
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
+              alt="Рабочее место веб-разработчика с ноутбуком"
+              width="340"
+              height="200"
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Руководство «БЭМ и доступность (a11y)»</h3>
             <p class="product-card__meta">
-              Арт. SP-05 • <span class="product-card__status">В наличии</span>
+              Арт. SP-05 • ★ 4.9 • <span class="product-card__status">В наличии</span>
             </p>
-            <p class="product-card__description">Практикум по именованию классов и доступности интерфейса.</p>
+            <p class="product-card__description">Настольная электронная книга и чек-лист по архитектуре CSS и удобству интерфейсов.</p>
             <ul class="product-card__features">
-              <li>Методология БЭМ</li>
-              <li>Клавиатурная навигация</li>
+              <li>Именование классов по методологии БЭМ</li>
+              <li>Полная клавиатурная навигация (Tab)</li>
+              <li>Разметка ARIA-ориентиров и ролей</li>
             </ul>
             <p class="product-card__price">Цена: 1200 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
           </article>
+
+          <!-- Карточка 6 -->
           <article class="product-card product-card--featured">
             <span class="product-card__badge">Топ</span>
-            <h3 class="product-card__title">Товар 6</h3>
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+              alt="Монитор с кодом проекта, готовым к публикации на GitHub"
+              width="340"
+              height="200"
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Полный бандл «Frontend-разработчик»</h3>
             <p class="product-card__meta">
-              Арт. SP-06 • <span class="product-card__status">В наличии</span>
+              Арт. SP-06 • ★ 5.0 • <span class="product-card__status">В наличии</span>
             </p>
-            <p class="product-card__description">Полный комплект материалов для подготовки к контрольной.</p>
+            <p class="product-card__description">Максимальный комплект: все шаблоны, UI-компоненты, исходники и гайд по деплою.</p>
             <ul class="product-card__features">
-              <li>Все 5 страниц проекта</li>
-              <li>Готовность к GitHub Pages</li>
+              <li>Все 5 связанных страниц проекта</li>
+              <li>Инструкция по выгрузке на GitHub Pages</li>
+              <li>Приоритетная проверка кода ревьюером</li>
             </ul>
             <p class="product-card__price">Цена: 3000 руб.</p>
             <a class="button button--primary product-card__button" href="product.html">Подробнее</a>

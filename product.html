@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Подробная карточка товара и таблица характеристик учебного интернет-магазина.">
-  <title>Карточка товара — Учебный интернет-магазин</title>
+  <meta name="description" content="Подробная карточка товара Стартовый шаблон ShopStarter UI и таблица сравнения комплектаций.">
+  <title>Стартовый шаблон «ShopStarter UI» — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
@@ -46,104 +46,190 @@
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current">Карточка товара</span>
+      <span class="breadcrumbs__current">Стартовый шаблон «ShopStarter UI»</span>
     </nav>
 
     <section class="section">
-      <h1>Учебный комплект разработчика «Товар 1»</h1>
-      <article class="product-card product-card--featured">
+      <h1>Стартовый шаблон интернет-магазина «ShopStarter UI»</h1>
+
+      <article class="product-card product-card--featured product-card--detailed">
         <span class="product-card__badge">Хит продаж</span>
-        <img
-          class="product-card__image"
-          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='260' viewBox='0 0 600 260'><rect width='600' height='260' rx='8' fill='%23eef5ff'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%230057b8' font-family='Arial, sans-serif' font-size='24' font-weight='bold'>ShopProject — Товар 1</text></svg>"
-          alt="Изображение учебного комплекта Товар 1"
-          width="600"
-          height="260"
-        >
-        <h2 class="product-card__title">Товар 1 — Базовый и Pro комплект</h2>
-        <p class="product-card__meta">
-          Артикул: SP-2026-PRO • Категория: Учебные комплекты • <span class="product-card__status">В наличии</span>
-        </p>
-        <p class="product-card__description">
-          Подробное описание учебного товара. Комплект предназначен для освоения современной вёрстки,
-          семантической структуры HTML, компонентного подхода по методологии БЭМ и построения сеток на Flexbox и CSS Grid.
-        </p>
-        <ul class="product-card__features">
-          <li>Полный набор шаблонов из 5 связанных HTML-страниц;</li>
-          <li>Готовая система дизайн-токенов (CSS-переменных) в блоке :root;</li>
-          <li>Модульная БЭМ-архитектура без конфликтов специфичности;</li>
-          <li>Доступные формы с клиентской валидацией и поддержкой клавиатуры.</li>
-        </ul>
-        <p class="product-card__price">
-          <span class="product-card__old-price">1400 руб.</span>
-          Цена: от 1000 руб.
-        </p>
-        <a class="button button--primary product-card__button" href="order.html">
-          Оформить заявку
-        </a>
+
+        <!-- Левая колонка: главное фото + миниатюры + теги -->
+        <div class="product-card__gallery">
+          <img
+            class="product-card__image product-card__image--main"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+            alt="Главный экран шаблона интернет-магазина ShopStarter UI на ноутбуке"
+            width="600"
+            height="360"
+          >
+          <div class="product-card__thumbs" aria-label="Дополнительные скриншоты товара">
+            <img
+              class="product-card__thumb"
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300&q=80"
+              alt="Фрагмент HTML и CSS кода по методологии БЭМ"
+              width="180"
+              height="110"
+              loading="lazy"
+            >
+            <img
+              class="product-card__thumb"
+              src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=300&q=80"
+              alt="Система CSS-переменных и палитра цветов"
+              width="180"
+              height="110"
+              loading="lazy"
+            >
+            <img
+              class="product-card__thumb"
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=300&q=80"
+              alt="Адаптивная сетка каталога товаров на CSS Grid"
+              width="180"
+              height="110"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__tags" aria-label="Технологии проекта">
+            <span class="product-card__tag">HTML5</span>
+            <span class="product-card__tag">CSS3 Grid &amp; Flexbox</span>
+            <span class="product-card__tag">Методология БЭМ</span>
+            <span class="product-card__tag">Доступность (WCAG / ARIA)</span>
+            <span class="product-card__tag">GitHub Pages Ready</span>
+          </div>
+        </div>
+
+        <!-- Правая колонка: детальное описание, характеристики и покупка -->
+        <div class="product-card__content">
+          <h2 class="product-card__title">Комплект шаблонов «ShopStarter UI» (Base &amp; Pro)</h2>
+          <p class="product-card__meta">
+            Артикул: <strong>SP-2026-PRO</strong> • Категория: <strong>Готовые шаблоны и UI-киты</strong> • Рейтинг: <strong>★ 4.9 (42 отзыва)</strong> • <span class="product-card__status">В наличии</span>
+          </p>
+
+          <p class="product-card__description">
+            Профессиональный учебно-практический комплект для быстрой разработки интернет-магазина.
+            Включает продуманную семантическую структуру HTML5, компонентную архитектуру по методологии БЭМ,
+            адаптивные сетки на Flexbox и CSS Grid, а также настроенные состояния фокуса для клавиатурной навигации.
+          </p>
+
+          <h3 class="product-card__subtitle">Что входит в комплект поставки:</h3>
+          <ul class="product-card__features">
+            <li><strong>5 готовых HTML-страниц:</strong> Главная, Каталог с фильтрами, Карточка товара, Оформление заказа и Контакты;</li>
+            <li><strong>Дизайн-система в :root:</strong> централизованное управление цветами, отступами и радиусами скругления;</li>
+            <li><strong>Чистая БЭМ-архитектура:</strong> изолированные блоки и модификаторы без конфликтов специфичности;</li>
+            <li><strong>Доступные веб-формы:</strong> клиентская валидация, поддержка <code>aria-invalid</code> и нативное окно <code>&lt;dialog&gt;</code>;</li>
+            <li><strong>Подробная документация:</strong> пошаговый гайд по кастомизации стилей и публикации на GitHub Pages.</li>
+          </ul>
+
+          <div class="product-card__specs-box">
+            <div class="product-card__spec-item">
+              <span class="product-card__spec-label">Версия релиза:</span>
+              <span class="product-card__spec-value">v2.4 (Октябрь 2026)</span>
+            </div>
+            <div class="product-card__spec-item">
+              <span class="product-card__spec-label">Формат файлов:</span>
+              <span class="product-card__spec-value">HTML5, CSS3, JS, SVG (ZIP-архив 14 МБ)</span>
+            </div>
+            <div class="product-card__spec-item">
+              <span class="product-card__spec-label">Совместимость:</span>
+              <span class="product-card__spec-value">Chrome, Firefox, Safari, Yandex, Edge</span>
+            </div>
+            <div class="product-card__spec-item">
+              <span class="product-card__spec-label">Доставка:</span>
+              <span class="product-card__spec-value">Мгновенная ссылка на скачивание + доступ в репозиторий</span>
+            </div>
+          </div>
+
+          <fieldset class="product-card__options">
+            <legend class="product-card__options-title">Выберите редакцию комплекта:</legend>
+            <label class="product-card__option">
+              <input type="radio" name="edition" value="base" checked>
+              <span><strong>Базовая (Base)</strong> — 5 шаблонов + базовые стили (1000 руб.)</span>
+            </label>
+            <label class="product-card__option">
+              <input type="radio" name="edition" value="pro">
+              <span><strong>Расширенная (Pro)</strong> — исходники + UI-кит + консультация (1800 руб.)</span>
+            </label>
+          </fieldset>
+
+          <div class="product-card__purchase">
+            <p class="product-card__price">
+              <span class="product-card__old-price">1400 руб.</span>
+              Цена: от 1000 руб.
+            </p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html">
+                Оформить заявку
+              </a>
+              <a class="button button--secondary product-card__button" href="#comparison">
+                Сравнить версии
+              </a>
+            </div>
+          </div>
+        </div>
       </article>
     </section>
 
-    <section class="section">
+    <section class="section" id="comparison">
       <h2>Характеристики и сравнение комплектаций</h2>
       <table class="product-table">
-        <caption>Расширенная таблица характеристик и сравнения тарифов товара</caption>
+        <caption>Расширенная таблица характеристик и сравнения тарифов шаблона «ShopStarter UI»</caption>
         <thead>
           <tr>
             <th>Параметр</th>
-            <th>Базовая версия</th>
+            <th>Базовая версия (Base)</th>
             <th>Расширенная версия (Pro)</th>
             <th>Примечание</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Категория</td>
-            <td>Учебный товар</td>
-            <td>Профессиональный комплект</td>
-            <td>Подходит для КР №1–5</td>
+            <td>Назначение</td>
+            <td>Учебный и стартовый проект</td>
+            <td>Профессиональный коммерческий комплект</td>
+            <td>Полностью подходит для КР №1–5</td>
           </tr>
           <tr>
-            <td>Артикул</td>
+            <td>Артикул в каталоге</td>
             <td>SP-2026-BASE</td>
             <td>SP-2026-PRO</td>
-            <td>Внутренний код каталога</td>
+            <td>Уникальный код продукта</td>
           </tr>
           <tr>
-            <td>Количество модулей</td>
-            <td>5 базовых модулей</td>
-            <td>12 расширенных модулей</td>
-            <td>Включая практику по БЭМ и сеткам</td>
+            <td>Количество компонентов</td>
+            <td>5 страниц + 8 базовых БЭМ-блоков</td>
+            <td>5 страниц + 24 расширенных БЭМ-блока</td>
+            <td>Включая галерею, табы и модальные окна</td>
           </tr>
           <tr>
             <td>Формат поставки</td>
-            <td>Цифровой доступ</td>
-            <td>Цифровой доступ + исходники</td>
+            <td>ZIP-архив с кодом HTML/CSS</td>
+            <td>ZIP-архив + закрытый Git-репозиторий + макет</td>
             <td>Мгновенное получение после заявки</td>
           </tr>
           <tr>
             <td>Техническая поддержка</td>
             <td>По электронной почте</td>
-            <td>Приоритетная 24/7 + консультации</td>
-            <td>Ответ в течение 15 минут</td>
+            <td>Приоритетная 24/7 + код-ревью проекта</td>
+            <td>Ответ специалиста в течение 15 минут</td>
           </tr>
           <tr>
             <td>Гарантия и обновления</td>
-            <td>6 месяцев</td>
-            <td>12 месяцев (бесплатные обновления)</td>
-            <td>Официальная гарантия проекта</td>
+            <td>6 месяцев обновлений</td>
+            <td>12 месяцев + бесплатные новые модули</td>
+            <td>Официальная гарантия ShopProject</td>
           </tr>
           <tr>
-            <td>Наличие на складе</td>
-            <td>В наличии</td>
-            <td>В наличии (по предзаказу)</td>
-            <td>Обновлено сегодня</td>
+            <td>Статус доступности</td>
+            <td>В наличии (моментально)</td>
+            <td>В наличии (моментально)</td>
+            <td>Релиз обновлён сегодня</td>
           </tr>
           <tr>
-            <td>Стоимость</td>
+            <td>Стоимость лицензии</td>
             <td>1000 руб.</td>
             <td>1800 руб.</td>
-            <td>Действует скидка для студентов</td>
+            <td>Действует скидка по студенческому</td>
           </tr>
         </tbody>
       </table>

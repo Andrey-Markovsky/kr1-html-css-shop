@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Главная страница учебного интернет-магазина: преимущества, популярные товары, частые вопросы и оформление заявки.">
-  <title>Главная — Учебный интернет-магазин</title>
+  <meta name="description" content="Главная страница учебного интернет-магазина: преимущества, популярные цифровые товары, частые вопросы и оформление заявки.">
+  <title>Главная — Учебный интернет-магазин ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -47,73 +47,101 @@
   </header>
   <main>
     <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
+      <h1>Магазин цифровых комплектов для веб-разработчиков</h1>
       <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
+        Готовые шаблоны вёрстки, компонентные UI-киты по методологии БЭМ и практические курсы
+        по современному HTML5 и CSS3. Выбирайте проверенные решения для учёбы и коммерческих проектов.
       </p>
       <a class="button button--primary" href="#popular">Перейти к товарам</a>
     </section>
     <section class="section" id="advantages">
       <h2>Преимущества проекта</h2>
       <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
+        <li>продуманная семантическая HTML5-структура;</li>
+        <li>компонентная архитектура по методологии БЭМ;</li>
+        <li>гибкая система дизайн-токенов (CSS-переменных в :root);</li>
+        <li>адаптивные сетки на Flexbox и CSS Grid с поддержкой доступности.</li>
       </ul>
     </section>
     <section class="section" id="popular">
       <h2>Популярные товары</h2>
       <div class="products-grid">
+        <!-- Популярный товар 1 -->
         <article class="product-card product-card--featured">
           <span class="product-card__badge">Хит</span>
-          <h3 class="product-card__title">Товар 1</h3>
+          <img
+            class="product-card__image"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+            alt="Ноутбук с открытым редактором кода HTML и CSS"
+            width="340"
+            height="200"
+            loading="lazy"
+          >
+          <h3 class="product-card__title">Стартовый шаблон «ShopStarter UI»</h3>
           <p class="product-card__meta">
-            Категория: Базовый комплект • <span class="product-card__status">В наличии</span>
+            Арт. SP-01 • ★ 4.9 • <span class="product-card__status">В наличии</span>
           </p>
-          <p class="product-card__description">Краткое описание учебного товара для старта в веб-разработке.</p>
+          <p class="product-card__description">Готовый комплект из 5 адаптивных страниц интернет-магазина с чистой архитектурой.</p>
           <ul class="product-card__features">
-            <li>5 практических модулей HTML/CSS</li>
-            <li>Готовые шаблоны семантики</li>
+            <li>5 связанных модулей HTML5/CSS3</li>
+            <li>Готовые шаблоны семантики и БЭМ</li>
           </ul>
           <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
+          <button class="button button--primary product-card__button" type="button" data-product="Стартовый шаблон «ShopStarter UI»">
             Заказать
           </button>
         </article>
+
+        <!-- Популярный товар 2 -->
         <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
+          <img
+            class="product-card__image"
+            src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=600&q=80"
+            alt="Каскадные таблицы стилей CSS на экране монитора"
+            width="340"
+            height="200"
+            loading="lazy"
+          >
+          <h3 class="product-card__title">Дизайн-система «RootTokens CSS»</h3>
           <p class="product-card__meta">
-            Категория: Стандарт • <span class="product-card__status">В наличии</span>
+            Арт. SP-02 • ★ 4.8 • <span class="product-card__status">В наличии</span>
           </p>
-          <p class="product-card__description">Комплект компонентов с настроенной CSS-архитектурой.</p>
+          <p class="product-card__description">Комплект компонентов с настроенной CSS-архитектурой, палитрой и переменными.</p>
           <ul class="product-card__features">
-            <li>Система переменных в :root</li>
-            <li>Состояния интерфейса и форм</li>
+            <li>Система переменных в блоке :root</li>
+            <li>Состояния интерфейса (:hover, :focus)</li>
           </ul>
           <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
+          <button class="button button--primary product-card__button" type="button" data-product="Дизайн-система «RootTokens CSS»">
             Заказать
           </button>
         </article>
+
+        <!-- Популярный товар 3 -->
         <article class="product-card product-card--discount">
-          <span class="product-card__badge">Скидка</span>
-          <h3 class="product-card__title">Товар 3</h3>
+          <span class="product-card__badge">Скидка -20%</span>
+          <img
+            class="product-card__image"
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+            alt="Исходный код веб-форм и валидации на экране"
+            width="340"
+            height="200"
+            loading="lazy"
+          >
+          <h3 class="product-card__title">Пакет форм «SmartForms &amp; Dialog»</h3>
           <p class="product-card__meta">
-            Категория: Акционный набор • <span class="product-card__status">В наличии</span>
+            Арт. SP-03 • ★ 4.7 • <span class="product-card__status">В наличии</span>
           </p>
-          <p class="product-card__description">Расширенный курс по построению сеток и методологии БЭМ.</p>
+          <p class="product-card__description">Коллекция доступных веб-форм заказа, обратной связи и нативных модальных окон.</p>
           <ul class="product-card__features">
-            <li>Раскладка на Flexbox и Grid</li>
-            <li>Полный БЭМ-рефакторинг</li>
+            <li>Модальное окно &lt;dialog&gt;</li>
+            <li>Клиентская валидация и aria-invalid</li>
           </ul>
           <p class="product-card__price">
             <span class="product-card__old-price">2500 руб.</span>
             Цена: 2000 руб.
           </p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
+          <button class="button button--primary product-card__button" type="button" data-product="Пакет форм «SmartForms & Dialog»">
             Заказать
           </button>
         </article>
@@ -145,9 +173,9 @@
     <aside class="aside-info">
       <h2>Информация для студентов</h2>
       <p>
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
+        В проекте реализованы все ключевые требования: интерактивные формы с валидацией,
+        модальное окно &lt;dialog&gt;, каталог на CSS Grid, подробная карточка товара с галереей
+        и таблицей сравнения комплектаций.
       </p>
     </aside>
   </main>
