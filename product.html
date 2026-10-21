@@ -46,7 +46,7 @@
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current" id="prod-breadcrumb">Стартовый шаблон «ShopStarter UI»</span>
+      <span class="breadcrumbs__current" id="prod-breadcrumb">Загрузка товара...</span>
     </nav>
 
     <!-- Быстрый переключатель между всеми 6 товарами магазина -->
@@ -63,34 +63,34 @@
     </nav>
 
     <section class="section">
-      <h1 id="prod-h1">Стартовый шаблон интернет-магазина «ShopStarter UI»</h1>
+      <h1 id="prod-h1">Загрузка товара...</h1>
 
       <article class="product-card product-card--featured product-card--detailed" id="prod-card">
-        <span class="product-card__badge" id="prod-badge">Хит продаж</span>
+        <span class="product-card__badge" id="prod-badge">Хит</span>
 
         <!-- Левая колонка: главное фото + миниатюры + теги -->
         <div class="product-card__gallery">
           <img
             class="product-card__image product-card__image--main"
             id="prod-img"
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
-            alt="Главный экран шаблона интернет-магазина ShopStarter UI на ноутбуке"
+            src=""
+            alt="Изображение товара"
             width="600"
             height="320"
           >
-          <div class="product-card__thumbs" aria-label="Дополнительные скриншоты товара (нажмите для увеличения)">
+          <div class="product-card__thumbs" aria-label="Дополнительные скриншоты товара">
             <img
               class="product-card__thumb"
               id="prod-thumb-1"
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
-              alt="Превью 1 — Общий вид"
+              src=""
+              alt="Превью 1"
               width="180"
               height="90"
             >
             <img
               class="product-card__thumb"
               src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
-              alt="Превью 2 — Структура кода"
+              alt="Превью 2"
               width="180"
               height="90"
               loading="lazy"
@@ -98,41 +98,26 @@
             <img
               class="product-card__thumb"
               src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
-              alt="Превью 3 — Адаптивная сетка"
+              alt="Превью 3"
               width="180"
               height="90"
               loading="lazy"
             >
           </div>
-          <div class="product-card__tags" id="prod-tags" aria-label="Технологии проекта">
-            <span class="product-card__tag">HTML5</span>
-            <span class="product-card__tag">CSS3 Grid &amp; Flexbox</span>
-            <span class="product-card__tag">Методология БЭМ</span>
-            <span class="product-card__tag">Доступность (WCAG / ARIA)</span>
-            <span class="product-card__tag">GitHub Pages Ready</span>
-          </div>
+          <div class="product-card__tags" id="prod-tags" aria-label="Технологии проекта"></div>
         </div>
 
         <!-- Правая колонка: детальное описание, характеристики и покупка -->
         <div class="product-card__content">
-          <h2 class="product-card__title" id="prod-title">Комплект шаблонов «ShopStarter UI» (Base &amp; Pro)</h2>
+          <h2 class="product-card__title" id="prod-title">Название товара</h2>
           <p class="product-card__meta">
-            Артикул: <strong id="prod-sku">SP-01-PRO</strong> • Категория: <strong id="prod-cat">Готовые шаблоны и UI-киты</strong> • Рейтинг: <strong id="prod-rating">★ 4.9 (42 отзыва)</strong> • <span class="product-card__status">В наличии</span>
+            Артикул: <strong id="prod-sku">SP-01</strong> • Категория: <strong id="prod-cat">Категория</strong> • Рейтинг: <strong id="prod-rating">★ 4.9</strong> • <span class="product-card__status">В наличии</span>
           </p>
 
-          <p class="product-card__description" id="prod-desc">
-            Профессиональный учебно-практический комплект для быстрой разработки интернет-магазина.
-            Включает продуманную семантическую структуру HTML5, компонентную архитектуру по методологии БЭМ,
-            адаптивные сетки на Flexbox и CSS Grid, а также настроенные состояния фокуса для клавиатурной навигации.
-          </p>
+          <p class="product-card__description" id="prod-desc">Описание товара...</p>
 
           <h3 class="product-card__subtitle">Что входит в комплект поставки:</h3>
-          <ul class="product-card__features" id="prod-features">
-            <li><strong>5 готовых HTML-страниц:</strong> Главная, Каталог с фильтрами, Карточка товара, Оформление заказа и Контакты;</li>
-            <li><strong>Дизайн-система в :root:</strong> централизованное управление цветами, отступами и радиусами скругления;</li>
-            <li><strong>Чистая БЭМ-архитектура:</strong> изолированные блоки и модификаторы без конфликтов специфичности;</li>
-            <li><strong>Доступные веб-формы:</strong> клиентская валидация, поддержка <code>aria-invalid</code> и нативное окно <code>&lt;dialog&gt;</code>;</li>
-          </ul>
+          <ul class="product-card__features" id="prod-features"></ul>
 
           <div class="product-card__specs-box">
             <div class="product-card__spec-item">
@@ -141,11 +126,11 @@
             </div>
             <div class="product-card__spec-item">
               <span class="product-card__spec-label">Формат файлов:</span>
-              <span class="product-card__spec-value" id="prod-format">HTML5, CSS3, JS, SVG (ZIP-архив 14 МБ)</span>
+              <span class="product-card__spec-value" id="prod-format">ZIP-архив</span>
             </div>
             <div class="product-card__spec-item">
               <span class="product-card__spec-label">Доставка:</span>
-              <span class="product-card__spec-value">Мгновенная ссылка на скачивание + доступ в репозиторий</span>
+              <span class="product-card__spec-value">Мгновенная ссылка на скачивание</span>
             </div>
           </div>
 
@@ -153,17 +138,17 @@
             <legend class="product-card__options-title">Выберите редакцию комплекта:</legend>
             <label class="product-card__option">
               <input type="radio" name="edition" value="base" checked>
-              <span id="prod-opt-base"><strong>Базовая (Base)</strong> — стандартный пакет (1000 руб.)</span>
+              <span id="prod-opt-base"><strong>Базовая (Base)</strong></span>
             </label>
             <label class="product-card__option">
               <input type="radio" name="edition" value="pro">
-              <span id="prod-opt-pro"><strong>Расширенная (Pro)</strong> — исходники + консультация (1800 руб.)</span>
+              <span id="prod-opt-pro"><strong>Расширенная (Pro)</strong></span>
             </label>
           </fieldset>
 
           <div class="product-card__purchase">
             <p class="product-card__price">
-              <span class="product-card__old-price" id="prod-old-price">1400 руб.</span>
+              <span class="product-card__old-price" id="prod-old-price"></span>
               <span id="prod-price">Цена: 1000 руб.</span>
             </p>
             <div class="product-card__actions">
@@ -182,7 +167,7 @@
     <section class="section" id="comparison">
       <h2>Характеристики и сравнение комплектаций</h2>
       <table class="product-table">
-        <caption id="table-caption">Расширенная таблица характеристик и сравнения тарифов товара</caption>
+        <caption id="table-caption">Расширенная таблица характеристик товара</caption>
         <thead>
           <tr>
             <th>Параметр</th>
@@ -207,7 +192,7 @@
           <tr>
             <td>Состав пакета</td>
             <td id="table-mod-base">5 базовых модулей</td>
-            <td id="table-mod-pro">12 расширенных модулей + исходники</td>
+            <td id="table-mod-pro">12 расширенных модулей</td>
             <td>Включая практику по БЭМ и сеткам</td>
           </tr>
           <tr>
@@ -251,7 +236,7 @@
   </footer>
   <a class="back-to-top" href="#top" aria-label="Вернуться в начало страницы">↑ Наверх</a>
 
-  <!-- Скрипт динамической подстановки выбранного товара по параметру ?id=1..6 -->
+  <!-- Скрипт динамической загрузки товара -->
   <script>
     const PRODUCTS_DB = {
       "1": {
@@ -412,8 +397,9 @@
       }
     };
 
-    const params = new URLSearchParams(window.location.search);
-    const currentId = PRODUCTS_DB[params.get("id")] ? params.get("id") : "1";
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = urlParams.get("id");
+    const currentId = PRODUCTS_DB[idParam] ? idParam : "1";
     const item = PRODUCTS_DB[currentId];
 
     document.title = item.name + " — Учебный интернет-магазин ShopProject";
